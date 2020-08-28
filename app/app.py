@@ -93,10 +93,10 @@ def predict():
 		number = request.form['number']
 		data2 = [number.upper()]
 		message="Predicted "+str(data)+" stock opening price for tomorrow: $"+str(predicted_stock_price)
-		account_sid = "ACfe48b0ac39cabddcff0b0cbe8795c213"
-		auth_token = "0ce290712c794951209a3bb94dd60e84"
+		account_sid = "ACCOUNT_SID"
+		auth_token = "AUTH_TOKEN"
 		client = Client(account_sid, auth_token)
-		client.messages.create(to=data2,from_="+14092007195",body=message)
+		client.messages.create(to=data2,from_="TWILIO_NUMBER",body=message)
 		#output message to user on the home webpage letting them know that the text message with the prediction has been sent
 	return render_template('index.html',prediction_text="Text message with the predicted "+str(data)+" stock price for tomorrow has been sent!")
 	
