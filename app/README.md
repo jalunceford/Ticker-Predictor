@@ -1,0 +1,14 @@
+# Ticker-Predictor
+A web app that uses machine learning to predict future stock prices.
+The project contains an app.py file written in python and an index.html file written in html.
+The web app is powered by Flask.
+Additionally, the machine learning model used to predict future stock prices is an LSTM neural network, which is a type of RNN (Recurrent Neural Network).
+Right now, the neural net only takes in one input feature (past opening prices for a particular stock).
+I am currently working on optimizing the model by adding more input features (such as the complete historical price data for a particular stock, including close, adj, volume, etc.) and sentiment analysis from Google Search results. I also want to figure out a way to predict multiple stocks at a time, and still receive an output in a timely manner. Unfortunately, this seems difficult to accomplish given the nature of neural networks and how long they take to train.
+You will need to have python 3 installed in your terminal before attempting to interact with the web app.
+Also make sure to install all of the necessary packages in terminal with "pip install ..." in order for the program to run smoothly.
+You will also need to get your own Twilio account in order for the app to send the text messages to yourself. Luckily, buying a Twilio phone number is free if you are on a free trial (which is what I did). So once you have that set up, input the account_sid and auth_token that comes with your twilio account, and also input your personal phone number and the twilio phone number you just receieved into the proper sections in the app.py file, which I have labeled in all Caps. If you have any questions on the Twilio text message part of the project, check out this super helpful youtube video that I watched to help me get started: https://www.youtube.com/watch?v=knxlmCVFAZI&t=108s
+Once you have all of the files (the python.py and index.html files) downloaded onto your favorite text editor, make sure to first set up type "python app.py" into your terminal to run the app. A url should appear. Copy that url and paste it into a web browser, and predict away! However, make sure to press the predict button just once; it's supposed to take around ten minutes before anything happens. Machine learning algorithms can take some time to train properly!
+Let me know if you have any suggestions for how to improve anything! In particular, if anyone has any suggestions on how to get an output to the user right away after they hit the predict button in order to prevent confusion/frustration from the user, that would be great!
+P.S. If u get this error when running the program (builtins.ValueError
+ValueError: zero-size array to reduction operation maximum which has no identity), just try running the program again. This has happened to me a couple of times and each time that I simply reran the program, the program worked just fine.
