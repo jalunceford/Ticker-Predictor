@@ -99,6 +99,4 @@ def predict():
 		client.messages.create(to=data2,from_="+14092007195",body=message)
 		#output message to user on the home webpage letting them know that the text message with the prediction has been sent
 	return render_template('index.html',prediction_text="Text message with the predicted "+str(data)+" stock price for tomorrow has been sent!")
-
-if __name__ == "__main__":
-    app.run(debug=True)
+	
