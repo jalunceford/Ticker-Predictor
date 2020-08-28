@@ -1,0 +1,6 @@
+twilio=6.45.0
+numpy=1.15.4
+matplotlib=3.0.2
+pandas=0.24.1
+pandas_datareader=0.6.0
+fix_yahoo_finance=0.0.22
